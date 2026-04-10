@@ -35,13 +35,13 @@ const THEMES = [
     label: "DC",
     bg: "linear-gradient(135deg,#0000FF 0%,#FF0000 40%,#FFFFFF 100%)",
     accent: "#FF0000",
-    logo: "https://upload.wikimedia.org/wikipedia/en/thumb/f/f5/Delhi_Capitals_Logo.svg/200px-Delhi_Capitals_Logo.svg.png",
+    logo: "/dc.jpg",
   },
   {
     label: "GT",
     bg: "linear-gradient(135deg,#000080 0%,#FFD700 40%,#FFFFFF 100%)",
     accent: "#FFD700",
-    logo: "https://upload.wikimedia.org/wikipedia/en/thumb/2/2f/Gujarat_Titans_Logo.svg/200px-Gujarat_Titans_Logo.svg.png",
+    logo: "/gt.png",
   },
   {
     label: "KKR",
@@ -53,7 +53,7 @@ const THEMES = [
     label: "LSG",
     bg: "linear-gradient(135deg,#87CEEB 0%,#000080 40%,#FFFFFF 100%)",
     accent: "#000080",
-    logo: "https://upload.wikimedia.org/wikipedia/en/thumb/c/c4/Lucknow_Super_Giants_Logo.svg/200px-Lucknow_Super_Giants_Logo.svg.png",
+    logo: "/lsg.png",
   },
   {
     label: "MI",
@@ -65,7 +65,7 @@ const THEMES = [
     label: "PBKS",
     bg: "linear-gradient(135deg,#FF0000 0%,#FFFFFF 40%,#000000 100%)",
     accent: "#FF0000",
-    logo: "https://upload.wikimedia.org/wikipedia/en/thumb/1/1c/Punjab_Kings_Logo.svg/200px-Punjab_Kings_Logo.svg.png",
+    logo: "/pbks.png",
   },
   {
     label: "RR",
@@ -76,14 +76,14 @@ const THEMES = [
   {
     label: "RCB",
     bg: "linear-gradient(135deg,#FF0000 0%,#FFD700 40%,#000000 100%)",
-    accent: "#FFD700",
-    logo: "https://upload.wikimedia.org/wikipedia/en/thumb/2/2a/Royal_Challengers_Bangalore_2020_Logo.svg/200px-Royal_Challengers_Bangalore_2020_Logo.svg.png",
+    accent: "#FF0000",
+    logo: "/rcb.png",
   },
   {
     label: "SRH",
     bg: "linear-gradient(135deg,#FFA500 0%,#000000 40%,#FFFFFF 100%)",
     accent: "#FFA500",
-    logo: "https://upload.wikimedia.org/wikipedia/en/thumb/8/81/Sunrisers_Hyderabad.svg/200px-Sunrisers_Hyderabad.svg.png",
+    logo: "/srh.png",
   },
 ];
 
