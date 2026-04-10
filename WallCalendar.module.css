@@ -1,0 +1,540 @@
+/* ─── Layout ──────────────────────────────────────────────────────────────── */
+
+.calendarWrap {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 40px 16px 60px;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.calendar {
+  background: #ffffff;
+  border-radius: 4px 4px 14px 14px;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.14), 0 2px 8px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+/* ─── Binding ─────────────────────────────────────────────────────────────── */
+
+.binding {
+  background: #262626;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px;
+  gap: 0;
+}
+
+.ring {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 3px solid #4a4a4a;
+  background: #262626;
+  margin: 0 16px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.ring::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #3a3a3a;
+}
+
+/* ─── Hero ────────────────────────────────────────────────────────────────── */
+
+.hero {
+  position: relative;
+  height: 260px;
+  overflow: hidden;
+  transition: background 0.5s ease;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom right, transparent 45%, rgba(10, 30, 80, 0.5) 100%);
+}
+
+.navArrows {
+  position: absolute;
+  top: 14px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 18px;
+  z-index: 10;
+}
+
+.navBtn {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 22px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.navBtn:hover {
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.themeBtn {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  color: #ffffff;
+  border-radius: 20px;
+  padding: 5px 16px;
+  font-size: 11px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  transition: background 0.15s;
+}
+
+.themeBtn:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.heroBadge {
+  position: absolute;
+  bottom: 36px;
+  right: 30px;
+  text-align: right;
+}
+
+.heroYear {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: 5px;
+}
+
+.heroMonth {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 44px;
+  color: #ffffff;
+  line-height: 1;
+  letter-spacing: 1px;
+}
+
+.heroChevron {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 38px;
+  overflow: hidden;
+}
+
+.heroChevron svg {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* ─── Body ────────────────────────────────────────────────────────────────── */
+
+.body {
+  display: grid;
+  grid-template-columns: 168px 1fr;
+  min-height: 340px;
+}
+
+/* ─── Notes Panel ─────────────────────────────────────────────────────────── */
+
+.notesPanel {
+  border-right: 1px solid #ede9e2;
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #faf9f6;
+}
+
+.notesLabel {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: #aaa;
+  text-transform: uppercase;
+}
+
+.rangeSummary {
+  font-size: 11px;
+  color: #1a6fc4;
+  background: #e8f2fd;
+  border-radius: 6px;
+  padding: 7px 10px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.notesSection {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.notesSectionLabel {
+  font-size: 10px;
+  color: #bbb;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.notesWrapper {
+  position: relative;
+  flex: 1;
+  min-height: 120px;
+}
+
+.notesArea {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  resize: none;
+  border: none;
+  background: transparent;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12.5px;
+  color: #333;
+  line-height: 28px;
+  outline: none;
+  width: 100%;
+  padding: 0 2px;
+}
+
+.notesArea::placeholder {
+  color: #ccc;
+}
+
+.notesBg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  pointer-events: none;
+}
+
+.noteLine {
+  height: 28px;
+  border-bottom: 1px solid #ede8e0;
+  flex-shrink: 0;
+}
+
+/* ─── Grid Panel ──────────────────────────────────────────────────────────── */
+
+.gridPanel {
+  padding: 20px 20px 18px;
+}
+
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin-bottom: 8px;
+}
+
+.wd {
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  color: #aaa;
+  text-align: center;
+  padding-bottom: 6px;
+}
+
+.wdSat { color: #1a6fc4; }
+.wdSun { color: #cc4444; }
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+}
+
+/* ─── Day Cell ────────────────────────────────────────────────────────────── */
+
+.day {
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 13.5px;
+  font-weight: 400;
+  color: #1a1a1a;
+  transition: background 0.1s, color 0.1s;
+  user-select: none;
+  position: relative;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.day:hover:not(.other):not(.inRange) {
+  background: #e8f2fd;
+  color: #1a6fc4;
+}
+
+.day.other {
+  color: #d0cec8;
+  cursor: default;
+  font-size: 12.5px;
+  pointer-events: none;
+}
+
+.day.sat { color: #1a6fc4; }
+.day.sun { color: #cc4444; }
+
+/* Today indicator */
+.day.today::after {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0.5;
+}
+
+/* Range states */
+.day.inRange {
+  background: #d4ebff;
+  border-radius: 0;
+  color: #1a1a1a;
+}
+
+.day.inRange:first-child,
+.day.inRange:nth-child(7n+1) {
+  border-radius: 7px 0 0 7px;
+}
+
+.day.inRange:last-child,
+.day.inRange:nth-child(7n) {
+  border-radius: 0 7px 7px 0;
+}
+
+.day.rangeStart {
+  background: var(--accent, #1a6fc4) !important;
+  color: #fff !important;
+  border-radius: 7px !important;
+}
+
+.day.rangeEnd {
+  background: var(--accent, #1a6fc4) !important;
+  color: #fff !important;
+  border-radius: 7px !important;
+}
+
+.day.rangeStart.inRange {
+  border-radius: 7px 0 0 7px !important;
+}
+
+.day.rangeEnd.inRange {
+  border-radius: 0 7px 7px 0 !important;
+}
+
+.day.rangeStart.rangeEnd {
+  border-radius: 7px !important;
+}
+
+/* Has note dot */
+.day.hasNote::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0.35;
+}
+
+/* Holiday label */
+.holidayLabel {
+  font-size: 7.5px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  color: inherit;
+  opacity: 0.65;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  padding: 0 2px;
+  pointer-events: none;
+}
+
+/* ─── Footer ──────────────────────────────────────────────────────────────── */
+
+.footer {
+  padding: 10px 20px 16px;
+  border-top: 1px solid #ede9e2;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.legend {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: #aaa;
+}
+
+.legendDot {
+  width: 11px;
+  height: 11px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.legendToday {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  border: 2px solid #aaa;
+  flex-shrink: 0;
+}
+
+.legendNote {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  opacity: 0.5;
+  flex-shrink: 0;
+}
+
+.clearBtn {
+  margin-left: auto;
+  font-size: 11.5px;
+  font-family: 'DM Sans', sans-serif;
+  color: #aaa;
+  background: none;
+  border: 1px solid #e0dbd2;
+  border-radius: 20px;
+  padding: 5px 16px;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.clearBtn:hover {
+  color: #555;
+  border-color: #aaa;
+}
+
+/* ─── Animation ───────────────────────────────────────────────────────────── */
+
+@keyframes flipIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.flipEnter {
+  animation: flipIn 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ─── Responsive ──────────────────────────────────────────────────────────── */
+
+@media (max-width: 580px) {
+  .calendarWrap {
+    padding: 20px 10px 40px;
+  }
+
+  .body {
+    grid-template-columns: 1fr;
+  }
+
+  .notesPanel {
+    border-right: none;
+    border-bottom: 1px solid #ede9e2;
+    max-height: 180px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+    overflow-y: auto;
+  }
+
+  .notesSection {
+    flex: 1;
+    min-width: 120px;
+  }
+
+  .hero {
+    height: 190px;
+  }
+
+  .heroMonth {
+    font-size: 30px;
+  }
+
+  .heroYear {
+    font-size: 15px;
+  }
+
+  .ring {
+    margin: 0 10px;
+  }
+
+  .day {
+    min-height: 36px;
+    font-size: 12.5px;
+  }
+
+  .gridPanel {
+    padding: 14px 12px;
+  }
+
+  .footer {
+    gap: 10px;
+  }
+
+  .clearBtn {
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 360px) {
+  .heroMonth { font-size: 24px; }
+  .day { min-height: 30px; font-size: 11.5px; }
+  .wd  { font-size: 9px; }
+}
