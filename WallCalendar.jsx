@@ -28,7 +28,7 @@ const THEMES = [
   {
     label: "CSK",
     bg: "linear-gradient(135deg,#FFFF00 0%,#FFD700 50%,#FFFFFF 100%)",
-    accent: "#FFD700",
+    accent: "#FFFF00",
     logo: "https://upload.wikimedia.org/wikipedia/en/thumb/2/2b/Chennai_Super_Kings_Logo.svg/200px-Chennai_Super_Kings_Logo.svg.png",
   },
   {
@@ -70,7 +70,7 @@ const THEMES = [
   {
     label: "RR",
     bg: "linear-gradient(135deg,#FFC0CB 0%,#0000FF 50%,#FFFFFF 100%)",
-    accent: "#FFC0CB",
+    accent: "#0000FF",
     logo: "/rr.png",
   },
   {
@@ -82,7 +82,7 @@ const THEMES = [
   {
     label: "SRH",
     bg: "linear-gradient(135deg,#FFA500 0%,#000000 50%,#FFFFFF 100%)",
-    accent: "#FFA500",
+    accent: "#000000",
     logo: "/srh.png",
   },
 ];
