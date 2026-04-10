@@ -34,31 +34,31 @@ const THEMES = [
   {
     label: "DC",
     bg: "linear-gradient(135deg,#0000FF 0%,#FF0000 50%,#FFFFFF 100%)",
-    accent: "#FF0000",
+    accent: "#0000FF",
     logo: "/dc.jpg",
   },
   {
     label: "GT",
     bg: "linear-gradient(135deg,#000080 0%,#FFD700 50%,#FFFFFF 100%)",
-    accent: "#FFD700",
+    accent: "#000080",
     logo: "/gt.png",
   },
   {
     label: "KKR",
     bg: "linear-gradient(135deg,#800080 0%,#FFD700 50%,#FFFFFF 100%)",
-    accent: "#FFD700",
+    accent: "#800080",
     logo: "https://upload.wikimedia.org/wikipedia/en/thumb/4/4c/Kolkata_Knight_Riders_Logo.svg/200px-Kolkata_Knight_Riders_Logo.svg.png",
   },
   {
     label: "LSG",
     bg: "linear-gradient(135deg,#87CEEB 0%,#4682B4 50%,#FFFFFF 100%)",
-    accent: "#000080",
+    accent: "#87CEEB",
     logo: "/lsg.png",
   },
   {
     label: "MI",
     bg: "linear-gradient(135deg,#0000FF 0%,#FFD700 50%,#FFFFFF 100%)",
-    accent: "#FFD700",
+    accent: "#0000FF",
     logo: "https://upload.wikimedia.org/wikipedia/en/thumb/c/cd/Mumbai_Indians_Logo.svg/200px-Mumbai_Indians_Logo.svg.png",
   },
   {
@@ -70,19 +70,19 @@ const THEMES = [
   {
     label: "RR",
     bg: "linear-gradient(135deg,#FFC0CB 0%,#0000FF 50%,#FFFFFF 100%)",
-    accent: "#0000FF",
+    accent: "#FFC0CB",
     logo: "/rr.png",
   },
   {
     label: "RCB",
     bg: "linear-gradient(135deg,#FF0000 0%,#000000 50%,#FFD700 100%)",
-    accent: "#FFD700",
+    accent: "#FF0000",
     logo: "/rcb.png",
   },
   {
     label: "SRH",
     bg: "linear-gradient(135deg,#FFA500 0%,#000000 50%,#FFFFFF 100%)",
-    accent: "#000000",
+    accent: "#FFA500",
     logo: "/srh.png",
   },
 ];
