@@ -26,29 +26,64 @@ const HOLIDAYS = {
 
 const THEMES = [
   {
-    label: "alpine",
-    bg: "linear-gradient(135deg,#b8cfe0 0%,#7da8c7 40%,#4a7a9b 100%)",
-    accent: "#1a6fc4",
+    label: "CSK",
+    bg: "linear-gradient(135deg,#FFFF00 0%,#0000FF 40%,#FFD700 100%)",
+    accent: "#FFD700",
+    logo: "https://upload.wikimedia.org/wikipedia/en/thumb/2/2b/Chennai_Super_Kings_Logo.svg/200px-Chennai_Super_Kings_Logo.svg.png",
   },
   {
-    label: "forest",
-    bg: "linear-gradient(135deg,#c8d5b9 0%,#8aaa7a 40%,#4a7a3a 100%)",
-    accent: "#3a6e2a",
+    label: "DC",
+    bg: "linear-gradient(135deg,#0000FF 0%,#FF0000 40%,#FFFFFF 100%)",
+    accent: "#FF0000",
+    logo: "https://upload.wikimedia.org/wikipedia/en/thumb/f/f5/Delhi_Capitals_Logo.svg/200px-Delhi_Capitals_Logo.svg.png",
   },
   {
-    label: "desert",
-    bg: "linear-gradient(135deg,#e8d5b0 0%,#c8a870 40%,#a06030 100%)",
-    accent: "#8a5020",
+    label: "GT",
+    bg: "linear-gradient(135deg,#000080 0%,#FFD700 40%,#FFFFFF 100%)",
+    accent: "#FFD700",
+    logo: "https://upload.wikimedia.org/wikipedia/en/thumb/2/2f/Gujarat_Titans_Logo.svg/200px-Gujarat_Titans_Logo.svg.png",
   },
   {
-    label: "dusk",
-    bg: "linear-gradient(135deg,#d0c0e0 0%,#a080c0 40%,#604090 100%)",
-    accent: "#6040a0",
+    label: "KKR",
+    bg: "linear-gradient(135deg,#800080 0%,#FFD700 40%,#FFFFFF 100%)",
+    accent: "#FFD700",
+    logo: "https://upload.wikimedia.org/wikipedia/en/thumb/4/4c/Kolkata_Knight_Riders_Logo.svg/200px-Kolkata_Knight_Riders_Logo.svg.png",
   },
   {
-    label: "ocean",
-    bg: "linear-gradient(135deg,#c0d8e8 0%,#6090c0 40%,#203870 100%)",
-    accent: "#1a3870",
+    label: "LSG",
+    bg: "linear-gradient(135deg,#87CEEB 0%,#000080 40%,#FFFFFF 100%)",
+    accent: "#000080",
+    logo: "https://upload.wikimedia.org/wikipedia/en/thumb/c/c4/Lucknow_Super_Giants_Logo.svg/200px-Lucknow_Super_Giants_Logo.svg.png",
+  },
+  {
+    label: "MI",
+    bg: "linear-gradient(135deg,#0000FF 0%,#FFD700 40%,#FFFFFF 100%)",
+    accent: "#FFD700",
+    logo: "https://upload.wikimedia.org/wikipedia/en/thumb/c/cd/Mumbai_Indians_Logo.svg/200px-Mumbai_Indians_Logo.svg.png",
+  },
+  {
+    label: "PBKS",
+    bg: "linear-gradient(135deg,#FF0000 0%,#FFFFFF 40%,#000000 100%)",
+    accent: "#FF0000",
+    logo: "https://upload.wikimedia.org/wikipedia/en/thumb/1/1c/Punjab_Kings_Logo.svg/200px-Punjab_Kings_Logo.svg.png",
+  },
+  {
+    label: "RR",
+    bg: "linear-gradient(135deg,#FFC0CB 0%,#0000FF 40%,#FFFFFF 100%)",
+    accent: "#FFC0CB",
+    logo: "https://upload.wikimedia.org/wikipedia/en/thumb/6/60/Rajasthan_Royals_Logo.svg/200px-Rajasthan_Royals_Logo.svg.png",
+  },
+  {
+    label: "RCB",
+    bg: "linear-gradient(135deg,#FF0000 0%,#FFD700 40%,#000000 100%)",
+    accent: "#FFD700",
+    logo: "https://upload.wikimedia.org/wikipedia/en/thumb/2/2a/Royal_Challengers_Bangalore_2020_Logo.svg/200px-Royal_Challengers_Bangalore_2020_Logo.svg.png",
+  },
+  {
+    label: "SRH",
+    bg: "linear-gradient(135deg,#FFA500 0%,#000000 40%,#FFFFFF 100%)",
+    accent: "#FFA500",
+    logo: "https://upload.wikimedia.org/wikipedia/en/thumb/8/81/Sunrisers_Hyderabad.svg/200px-Sunrisers_Hyderabad.svg.png",
   },
 ];
 
@@ -118,6 +153,7 @@ function Hero({ year, month, theme, onPrev, onNext, onTheme }) {
   return (
     <div className={styles.hero} style={{ background: theme.bg }}>
       <div className={styles.heroOverlay} />
+      <div className={styles.heroLogo} style={{ backgroundImage: `url(${theme.logo})` }} />
 
       <div className={styles.navArrows}>
         <button className={styles.navBtn} onClick={onPrev} aria-label="Previous month">

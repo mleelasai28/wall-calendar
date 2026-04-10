@@ -65,6 +65,20 @@
   background: linear-gradient(to bottom right, transparent 45%, rgba(10, 30, 80, 0.5) 100%);
 }
 
+.heroLogo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.8;
+  z-index: 5;
+}
+
 .navArrows {
   position: absolute;
   top: 14px;
