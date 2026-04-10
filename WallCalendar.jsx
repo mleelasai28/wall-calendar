@@ -153,7 +153,7 @@ function Hero({ year, month, theme, onPrev, onNext, onTheme }) {
   return (
     <div className={styles.hero} style={{ background: theme.bg }}>
       <div className={styles.heroOverlay} />
-      <div className={styles.heroLogo} style={{ backgroundImage: `url(${theme.logo})` }} />
+      <img src={theme.logo} alt={`${theme.label} logo`} className={styles.heroLogo} />
 
       <div className={styles.navArrows}>
         <button className={styles.navBtn} onClick={onPrev} aria-label="Previous month">
